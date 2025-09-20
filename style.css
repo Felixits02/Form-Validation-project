@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #96b133;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.form-container {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    position: relative;
+
+}
+
+input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #2575fc;
+    outline: none;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+    color: #555;
+    user-select: none;
+    transition: color 0.3s;
+}
+
+.toggle-password:hover {
+    color: #2575fc;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1a5edc
+}
+
+small {
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    font-size: 12px;
+    visibility: hidden;
+    color: red;
+}
+
+.form-group.success input {
+    border-color: green;
+}
+
+.form-group.error input {
+    border-color: red;
+}
+
+.form-group.success small {
+    color: green;
+    visibility: visible;
+}
+
+.form-group.error small {
+    visibility: visible;
+}
+
+
+.password-requirements {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.password-requirements li {
+    color: red;
+    margin-bottom: 3px;
+    transition: color 0.3s;
+}
+
+.password-requirements li.valid {
+    color: green;
+    font-weight: bold;
+}
+
+
+/* responsive */
+@media screen and (max-width:500px) {
+    .form-container {
+        padding: 20px 15px
+    }
+
+    h2 {
+        font-size: 20px
+    }
+
+    .password-requirements {
+        font-size: 12px;
+    }
+
+}
